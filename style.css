@@ -1,0 +1,365 @@
+/*
+  Variáveis
+*/
+
+:root {
+    --main-color: #407bff;
+    --link-color: #666666;
+    --text1: #999999;
+    --highligth-text: #333333;
+    --input-text: #555555;
+    --white-color: #FFFFFF;
+    --point-list: #CCCCCC;
+    --line-input: #D9D9D9;
+  }
+  /*
+    Zerar estilos
+  */
+  
+  * {
+      margin: 0px; 
+      padding: 0px; 
+      box-sizing: border-box;
+  }
+  
+  body, html {
+      height: 100%;
+      font-family: Poppins-Regular, sans-serif;
+  }
+  
+  ul, li {
+      margin: 0px;
+      list-style-type: none;
+  }
+  
+  input, button {
+      outline: none !important;
+      border: none;
+  }
+  
+  button:hover {
+      cursor: pointer;
+  }
+  
+  /*
+    Utilitários
+  */
+  .botaofechar{
+    width: 40px;
+    height: 40px;
+    margin-left: 350px;
+    margin-bottom: 0px;
+  }
+  .text1 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: var(--text1);
+    line-height: 1.5;
+  }
+  
+  .text2 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: var(--main-color);
+    line-height: 1.5;
+  }
+  
+  .margin-bottom-35 {
+    margin-bottom: 35px;
+  }
+  
+  .margin-top-35 {
+    margin-top: 35px;
+  }
+  
+  .margin-bottom-8 {
+    margin-bottom: 8px;
+  }
+  
+  .margin-top-8 {
+    margin-top: 8px;
+  }
+  
+  .margin-left-50 {
+    margin-left: 0px;
+  }
+  
+  /*
+    Login
+  */
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .container-login {
+    width: 100%;  
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: var(--white-color);  
+  }
+  
+  .wrap-login {
+    width: 370px;
+    margin-right: 50px;
+    background: var(--white-color);
+  }
+  
+  /*
+    Formulário
+  */
+  
+  .login-form {
+    width: 100%;
+  }
+  
+  .login-form-title {
+    display: block;
+    font-family: Poppins-Bold;
+    font-size: 39px;
+    color: var(--highligth-text);
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  /*
+    Input
+  */
+  
+  .wrap-input {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid var(--line-input);
+  }
+  
+  .input-form {
+    font-family: Poppins-SemiBold;
+    font-size: 18px;
+    color: var(--input-text);
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 52px;
+    background: transparent;
+    padding: 0 5px;
+  }
+  
+  .focus-input-form {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .focus-input-form::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background: var(--main-color);
+  }
+  
+  .focus-input-form::after {
+    font-family: Poppins-Medium;
+    font-size: 18px;
+    color: var(--text1);
+    line-height: 1.2;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    padding-left: 5px;
+    transition: all 0.4s;
+  }
+  
+  .input-form:focus + .focus-input-form::after {
+    top: -20px;
+    font-size: 15px;
+  }
+  
+  .input-form:focus + .focus-input-form::before {
+    width: 100%;
+  }
+  
+  .has-val.input-form + .focus-input-form::after {
+    top: -20px;
+    font-size: 15px;
+  }
+  
+  .has-val.input-form + .focus-input-form::before {
+    width: 100%;
+  }
+  
+  /*
+    Botão
+  */
+  
+  .container-login-form-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .login-form-btn {
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: var(--white-color);
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: all 0.4s;
+  }
+  
+  .login-form-btn:hover  {
+    background-color: var(--highligth-text);
+  }
+  
+  /*
+    Links - Login utils
+  */
+  
+  a {
+      font-family: Poppins-Regular;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--link-color);
+      margin: 0px;
+      transition: all 0.4s;
+  }
+  
+  a:focus {
+      outline: none !important;
+  }
+  
+  a:hover {
+      text-decoration: none;
+    color: var(--highligth-text);
+  }
+  
+  /*
+    Login utils
+  */
+  
+  .login-utils {
+    margin-top: 20px;
+  }
+  
+  .login-utils li {
+    position: relative;
+    padding-left: 16px;
+  }
+  
+  .login-utils li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--point-list);
+    top: 45%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+/* Estilos para o cabeçalho do site com aparência Microsoft */
+.site-header {
+    text-align: center;
+    background-color: #00A3E0; /* Cor azul semelhante à da Microsoft */
+    padding: 10px 0; /* Espaçamento interno para melhorar a aparência */
+    display: flex;
+    justify-content: center;
+    align-items: c;
+    border-bottom: 3px solid #0078D4; /* Borda inferior azul escuro */
+    margin: 0; /* Remover margens */
+    position:static ; /* Adicione position: relative; */
+    color: #00A3E0;
+    border-left: #00A3E0;
+}
+/* Estilos para o título do site com sombra personalizada */
+.site-title {
+    font-family: 'Mono Space Bold Italic', monospace; /* Usar a fonte "Mono Space" em negrito itálico */
+    font-size: 60px; /* Tamanho de fonte maior para destaque */
+    font-style: italic; /* Adicionar estilo itálico */
+    font-weight: bold; /* Adicionar peso em negrito */
+    color: white; /* Cor azul da Microsoft */
+    margin: 0; /* Remova margens para evitar espaçamento indesejado */
+    text-transform: uppercase; /* Transformar o texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    position: relative; /* Posição relativa para facilitar a criação dos pseudo-elementos */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave do texto */
+    z-index: 1; /* Elevar o título acima do logo */
+}
+
+.site-title::before,
+.site-title::after {
+    content: attr(data-text); /* Usar o texto do título */
+    position: absolute; /* Posição absoluta para criar a sombra */
+    top: 0;
+    left: 0;
+    opacity: 0.3; /* Opacidade da sombra */
+    z-index: -1; /* Colocar a sombra atrás do texto */
+}
+
+.site-title::before {
+    color: rgba(0, 0, 0, 0.4); /* Cor da sombra */
+    transform: translate(-2px, 2px); /* Deslocamento da sombra para baixo e para a esquerda */
+}
+
+.site-title::after {
+    color: rgba(255, 255, 255, 0.2); /* Cor da sombra */
+    transform: translate(2px, -2px); /* Deslocamento da sombra para cima e para a direita */
+}
+/* Estilos com transição suave */
+.site-title {
+    /* ... outros estilos ... */
+    transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+.site-title:hover {
+    color: rgb(93, 89, 89); /* Cor diferente quando o mouse passa por cima */
+}
+/* Animação de tremer */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.site-title:hover {
+    animation: shake 0.5s ease-in-out forwards;  /* Aplicar a animação na passagem do mouse */
+}
+/* Estilos para o container do logo */
+.logo-container {
+    width: 40px; /* Largura da imagem do logo */
+    height: auto; /* Altura ajustada automaticamente */
+    float:left; /* Alinhar à esquerda */
+    margin-right: 0px; /* Espaço à direita do logo */
+    margin-left: 10px;
+    z-index: 0; /* Coloque a logo atrás do título */
+    position: relative;
+    
+}
+
